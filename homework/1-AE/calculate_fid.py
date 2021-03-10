@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 from scipy import linalg
+import numpy as np
 from torch.nn.functional import adaptive_avg_pool2d
 from tqdm import tqdm
 
@@ -62,21 +63,30 @@ def calculate_frechet_distance(mu1, sigma1, mu2, sigma2, eps=1e-6):
             np.trace(sigma2) - 2 * tr_covmean)
 
 
+@torch.no_grad()
 def calculate_activation_statistics(dataloader, model, classifier):
     classifier.eval()
     model.eval()
     device = next(model.parameters()).device
-    
-    # Здесь ожидается что вы пройдете по данным из даталоадера и соберете активации классификатора для реальных и сгенерированных данных
-    # После этого посчитаете по ним среднее и ковариацию, по которым посчитаете frechet distance
-    # В целом все как в подсчете оригинального FID, но с вашей кастомной моделью классификации
-    # note: не забывайте на каком девайсе у вас тензоры 
-    # note2: не забывайте делать .detach()
-    # YOUR CODE
+    batch_size = dataloader.batch_size
+    examples = len(dataloader) * batch_size
+    input_acts = np.zeros((examples, classifier.hidden))
+    output_acts = np.zeros((examples, classifier.hidden))
+
+    for i, (image, _) in enumerate(dataloader):
+        input_img = image.to(device)
+    output_img = model(input_img)
+    input_act = classifier.get_activations(input_img)
+    output_act = classifier.get_activations(output_img)
+    input_acts[i * batch_size: (i + 1) * batch_size] = input_act.cpu().numpy()
+    output_acts[i * batch_size: (i + 1) * batch_size] = output_act.cpu().numpy()
+    mu1, sigma1 = input_acts.mean(axis=0), np.cov(input_acts, rowvar=False)
+    mu2, sigma2 = output_acts.mean(axis=0), np.cov(output_acts, rowvar=False)
+    return mu1, sigma1, mu2, sigma2
+
 
 @torch.no_grad()
 def calculate_fid(dataloader, model, classifier):
-    
     m1, s1, m2, s2 = calculate_activation_statistics(dataloader, model, classifier)
     fid_value = calculate_frechet_distance(m1, s1, m2, s2)
 
