@@ -13,29 +13,34 @@ Notion: https://www.notion.so/mrartemevstudents/Generative-models-HSE-4ba9fa3db4
 # Results:
 
 <details>
-  <summary> ##HW1 Autoencoders </summary>
+  <summary> HW1 Autoencoders </summary>
   
-  ## [Report](https://wandb.ai/arinaruck/gen%20models%20hw1/reports/-1-AE--Vmlldzo0OTA1OTU) (in Russian)
+  ## Report (in Russian)
+  [here](https://wandb.ai/arinaruck/gen%20models%20hw1/reports/-1-AE--Vmlldzo0OTA1OTU)
   ## Results:
   Omniglot reconstruction
+  
   ![image](https://user-images.githubusercontent.com/22507422/116169116-a84d0c80-a70c-11eb-9ba5-d6502b66fe9f.png)
 
 </details>
 
 <details>
-  <summary> ##HW2 StarGAN</summary>
+  <summary> HW2 StarGAN</summary>
   
-  ## [Report](https://wandb.ai/arinaruck/gen%20models%20hw2/reports/-2--Vmlldzo1MjIxOTU) (in Russian)
+  ## Report(in Russian):
+  [here](https://wandb.ai/arinaruck/gen%20models%20hw2/reports/-2--Vmlldzo1MjIxOTU)
   ## Results:
   CelebA feature translation
+  
   ![image](https://user-images.githubusercontent.com/22507422/116169304-1a255600-a70d-11eb-8182-a3079014c1a7.png)
 
 </details>
 
 <details>
-  <summary> ##HW3 VAE + Glow </summary>
+  <summary> HW3 VAE + Glow </summary>
   
-  ## [Report](https://wandb.ai/arinaruck/gen%20models%20hw3/reports/HW3--Vmlldzo1NDYzNDQ) (in Russian)
+  ## Report (in Russian)
+  [here]((https://wandb.ai/arinaruck/gen%20models%20hw3/reports/HW3--Vmlldzo1NDYzNDQ))
   ## Results:
   VAE Generation
   ![image](https://user-images.githubusercontent.com/22507422/116169679-eeef3680-a70d-11eb-8819-57820207d793.png)
