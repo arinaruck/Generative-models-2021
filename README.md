@@ -37,7 +37,8 @@ Notion: https://www.notion.so/mrartemevstudents/Generative-models-HSE-4ba9fa3db4
   
   CelebA feature translation
   
-  ![image](https://user-images.githubusercontent.com/22507422/116169304-1a255600-a70d-11eb-8182-a3079014c1a7.png)
+  ![image](https://user-images.githubusercontent.com/22507422/116219337-2c76b280-a754-11eb-86fb-14f3568109ed.png)
+
 
 </details>
 
