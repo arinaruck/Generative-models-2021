@@ -50,7 +50,7 @@ Notion: https://www.notion.so/mrartemevstudents/Generative-models-HSE-4ba9fa3db4
   ## Results:
   Data example:
   
- ![image](https://user-images.githubusercontent.com/22507422/116219165-fb967d80-a753-11eb-9983-726ca696867a.png)
+ ![image](https://user-images.githubusercontent.com/22507422/116218664-6c896580-a753-11eb-8a7e-5420e066f6b3.png)
 
   VAE Generation
   ![image](https://user-images.githubusercontent.com/22507422/116169679-eeef3680-a70d-11eb-8819-57820207d793.png)
